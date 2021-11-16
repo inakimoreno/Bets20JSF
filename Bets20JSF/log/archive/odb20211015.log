@@ -1,0 +1,69 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-10-15 22:14:42 #1 store] 
+Database 'C:\Users\Iñaki Moreno\eclipse-workspace\Bets20JSF\src\main\resources\bets.temp' is opened by 27568@DESKTOP-UN6F2EK
+
+[2021-10-15 22:14:42 #2 type.registry] 
+New type domain.Question
+
+[2021-10-15 22:14:42 #3 type] 
+Type domain.Question is not enhanced.
+
+[2021-10-15 22:14:42 #4 type.registry] 
+New type domain.Event
+
+[2021-10-15 22:14:42 #5 type] 
+Type domain.Event is not enhanced.
+
+[2021-10-15 22:14:42 #6 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2021-10-15 22:14:42 #7 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-10-15 22:15:04 #1 store] 
+Database 'C:\Users\Iñaki Moreno\eclipse-workspace\Bets20JSF\src\main\resources\bets.temp' is opened by 6196@DESKTOP-UN6F2EK
+
+[2021-10-15 22:15:05 #2 type.registry] 
+New type domain.Question
+
+[2021-10-15 22:15:05 #3 type] 
+Type domain.Question is not enhanced.
+
+[2021-10-15 22:15:05 #4 type.registry] 
+New type domain.Event
+
+[2021-10-15 22:15:05 #5 type] 
+Type domain.Event is not enhanced.
+
+[2021-10-15 22:15:05 #6 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2021-10-15 22:15:05 #7 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-10-15 23:39:38 #1 store] 
+Database 'C:\Users\Iñaki Moreno\eclipse-workspace\Bets20JSF\src\main\resources\bets.temp' is opened by 4364@DESKTOP-UN6F2EK
+
+[2021-10-15 23:39:38 #2 type.registry] 
+New type domain.Question
+
+[2021-10-15 23:39:38 #3 type] 
+Type domain.Question is not enhanced.
+
+[2021-10-15 23:39:38 #4 type.registry] 
+New type domain.Event
+
+[2021-10-15 23:39:38 #5 type] 
+Type domain.Event is not enhanced.
+
+[2021-10-15 23:39:38 #6 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2021-10-15 23:39:38 #7 type.registry] 
+New type java.util.Vector<java.lang.Object>
+

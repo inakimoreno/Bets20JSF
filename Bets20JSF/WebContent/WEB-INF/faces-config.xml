@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+    version="2.0">
+	<managed-bean>
+		<managed-bean-name>query</managed-bean-name>
+		<managed-bean-class>bl.QueryQuestionsBean</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>facade</managed-bean-name>
+		<managed-bean-class>bl.FacadeBean</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>create</managed-bean-name>
+		<managed-bean-class>bl.CreateQuestionBean</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<navigation-rule>
+		<display-name>Home.xhtml</display-name>
+		<from-view-id>/Home.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>query</from-outcome>
+			<to-view-id>/QueryQuestions.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>Home.xhtml</display-name>
+		<from-view-id>/Home.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>create</from-outcome>
+			<to-view-id>/CreateQuestion.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+</faces-config>

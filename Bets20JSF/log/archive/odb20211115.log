@@ -1,0 +1,253 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-11-15 22:09:10 #1 store] 
+Database 'C:\Users\Iñaki Moreno\eclipse-workspace\Bets20JSF\src\main\resources\bets.temp' is opened by 26824@DESKTOP-UN6F2EK
+
+[2021-11-15 22:09:10 #2 type.registry] 
+New type domain.Question
+
+[2021-11-15 22:09:10 #3 type] 
+Type domain.Question is not enhanced.
+
+[2021-11-15 22:09:10 #4 type.registry] 
+New type domain.Event
+
+[2021-11-15 22:09:10 #5 type] 
+Type domain.Event is not enhanced.
+
+[2021-11-15 22:09:10 #6 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2021-11-15 22:09:10 #7 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-11-15 22:10:17 #1 store] 
+Database 'C:\Users\Iñaki Moreno\eclipse-workspace\Bets20JSF\src\main\resources\bets.temp' is opened by 27508@DESKTOP-UN6F2EK
+
+[2021-11-15 22:10:17 #2 type.registry] 
+New type domain.Question
+
+[2021-11-15 22:10:17 #3 type] 
+Type domain.Question is not enhanced.
+
+[2021-11-15 22:10:17 #4 type.registry] 
+New type domain.Event
+
+[2021-11-15 22:10:17 #5 type] 
+Type domain.Event is not enhanced.
+
+[2021-11-15 22:10:17 #6 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2021-11-15 22:10:17 #7 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-11-15 22:10:45 #1 store] 
+Database 'C:\Users\Iñaki Moreno\eclipse-workspace\Bets20JSF\src\main\resources\bets.temp' is opened by 3396@DESKTOP-UN6F2EK
+
+[2021-11-15 22:10:45 #2 type.registry] 
+New type domain.Question
+
+[2021-11-15 22:10:45 #3 type] 
+Type domain.Question is not enhanced.
+
+[2021-11-15 22:10:45 #4 type.registry] 
+New type domain.Event
+
+[2021-11-15 22:10:45 #5 type] 
+Type domain.Event is not enhanced.
+
+[2021-11-15 22:10:45 #6 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2021-11-15 22:10:45 #7 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-11-15 22:11:00 #1 store] 
+Database 'C:\Users\Iñaki Moreno\eclipse-workspace\Bets20JSF\src\main\resources\bets.temp' is opened by 19108@DESKTOP-UN6F2EK
+
+[2021-11-15 22:11:00 #2 type.registry] 
+New type domain.Question
+
+[2021-11-15 22:11:00 #3 type] 
+Type domain.Question is not enhanced.
+
+[2021-11-15 22:11:00 #4 type.registry] 
+New type domain.Event
+
+[2021-11-15 22:11:00 #5 type] 
+Type domain.Event is not enhanced.
+
+[2021-11-15 22:11:00 #6 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2021-11-15 22:11:00 #7 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-11-15 22:12:26 #1 store] 
+Database 'C:\Users\Iñaki Moreno\eclipse-workspace\Bets20JSF\src\main\resources\bets.temp' is opened by 26744@DESKTOP-UN6F2EK
+
+[2021-11-15 22:12:26 #2 type.registry] 
+New type domain.Question
+
+[2021-11-15 22:12:26 #3 type] 
+Type domain.Question is not enhanced.
+
+[2021-11-15 22:12:26 #4 type.registry] 
+New type domain.Event
+
+[2021-11-15 22:12:26 #5 type] 
+Type domain.Event is not enhanced.
+
+[2021-11-15 22:12:26 #6 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2021-11-15 22:12:26 #7 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-11-15 22:12:47 #1 store] 
+Database 'C:\Users\Iñaki Moreno\eclipse-workspace\Bets20JSF\src\main\resources\bets.temp' is opened by 26724@DESKTOP-UN6F2EK
+
+[2021-11-15 22:12:47 #2 type.registry] 
+New type domain.Question
+
+[2021-11-15 22:12:47 #3 type] 
+Type domain.Question is not enhanced.
+
+[2021-11-15 22:12:47 #4 type.registry] 
+New type domain.Event
+
+[2021-11-15 22:12:47 #5 type] 
+Type domain.Event is not enhanced.
+
+[2021-11-15 22:12:47 #6 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2021-11-15 22:12:47 #7 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-11-15 22:13:04 #1 store] 
+Database 'C:\Users\Iñaki Moreno\eclipse-workspace\Bets20JSF\src\main\resources\bets.temp' is opened by 22824@DESKTOP-UN6F2EK
+
+[2021-11-15 22:13:04 #2 type.registry] 
+New type domain.Question
+
+[2021-11-15 22:13:04 #3 type] 
+Type domain.Question is not enhanced.
+
+[2021-11-15 22:13:04 #4 type.registry] 
+New type domain.Event
+
+[2021-11-15 22:13:04 #5 type] 
+Type domain.Event is not enhanced.
+
+[2021-11-15 22:13:04 #6 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2021-11-15 22:13:04 #7 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-11-15 22:13:22 #1 store] 
+Database 'C:\Users\Iñaki Moreno\eclipse-workspace\Bets20JSF\src\main\resources\bets.temp' is opened by 22844@DESKTOP-UN6F2EK
+
+[2021-11-15 22:13:22 #2 type.registry] 
+New type domain.Question
+
+[2021-11-15 22:13:22 #3 type] 
+Type domain.Question is not enhanced.
+
+[2021-11-15 22:13:22 #4 type.registry] 
+New type domain.Event
+
+[2021-11-15 22:13:22 #5 type] 
+Type domain.Event is not enhanced.
+
+[2021-11-15 22:13:22 #6 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2021-11-15 22:13:22 #7 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-11-15 22:13:39 #1 store] 
+Database 'C:\Users\Iñaki Moreno\eclipse-workspace\Bets20JSF\src\main\resources\bets.temp' is opened by 21448@DESKTOP-UN6F2EK
+
+[2021-11-15 22:13:39 #2 type.registry] 
+New type domain.Question
+
+[2021-11-15 22:13:39 #3 type] 
+Type domain.Question is not enhanced.
+
+[2021-11-15 22:13:39 #4 type.registry] 
+New type domain.Event
+
+[2021-11-15 22:13:39 #5 type] 
+Type domain.Event is not enhanced.
+
+[2021-11-15 22:13:39 #6 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2021-11-15 22:13:39 #7 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-11-15 22:13:54 #1 store] 
+Database 'C:\Users\Iñaki Moreno\eclipse-workspace\Bets20JSF\src\main\resources\bets.temp' is opened by 9612@DESKTOP-UN6F2EK
+
+[2021-11-15 22:13:54 #2 type.registry] 
+New type domain.Question
+
+[2021-11-15 22:13:54 #3 type] 
+Type domain.Question is not enhanced.
+
+[2021-11-15 22:13:54 #4 type.registry] 
+New type domain.Event
+
+[2021-11-15 22:13:54 #5 type] 
+Type domain.Event is not enhanced.
+
+[2021-11-15 22:13:54 #6 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2021-11-15 22:13:54 #7 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-11-15 22:14:07 #1 store] 
+Database 'C:\Users\Iñaki Moreno\eclipse-workspace\Bets20JSF\src\main\resources\bets.temp' is opened by 23608@DESKTOP-UN6F2EK
+
+[2021-11-15 22:14:07 #2 type.registry] 
+New type domain.Question
+
+[2021-11-15 22:14:07 #3 type] 
+Type domain.Question is not enhanced.
+
+[2021-11-15 22:14:07 #4 type.registry] 
+New type domain.Event
+
+[2021-11-15 22:14:07 #5 type] 
+Type domain.Event is not enhanced.
+
+[2021-11-15 22:14:07 #6 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2021-11-15 22:14:08 #7 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
