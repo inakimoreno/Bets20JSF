@@ -1,12 +1,14 @@
 package bl;
 
 import java.util.ArrayList;
+
 import java.util.Date;
 import java.util.List;
 import java.util.Vector;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
+import javax.faces.event.AjaxBehaviorEvent;
 
 import org.primefaces.event.SelectEvent;
 
@@ -20,7 +22,8 @@ import domain.Question;
 public class QueryQuestionsBean {
 
 	private BLFacade businessLogic = FacadeBean.getBusinessLogic();
-	private List<Event> ebentuak = new ArrayList<Event>(); //businessLogic.getEvents(UtilDate.newDate(2022, 0, 17));
+	private static List<Event> ebentuak = new ArrayList<Event>(); //businessLogic.getEvents(UtilDate.newDate(2022, 0, 17));
+	private static List<Question> galderak = new ArrayList<Question>();
 	private Date date;
 	private Event ebentua;
 	
@@ -53,26 +56,40 @@ public class QueryQuestionsBean {
 	}
 	
 	public void onDateSelect(SelectEvent event) {
-		String[] date = (event.getObject()).toString().split(" ");
-		int year = Integer.parseInt(date[5]);
-		String month = date[1];
-		int monthNum = 0;
-		if (month.equals("Dec")){
-			monthNum = 11;
-		}
-		int day = Integer.parseInt(date[2]);
-		this.setDate(UtilDate.newDate(year,monthNum,day));
+		this.date = (Date)event.getObject();
 		this.setEbentuak();
 		//System.out.println(this.date);
-		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Data aukeratua: " + this.ebentuak));
+		//FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Data aukeratua: "+this.getDate()+" "+ this.ebentuak));
 	}
+	/*
+	public void onEventSelect(AjaxBehaviorEvent event) {
+		//this.setEbentua(event.ge);
+		//FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(event.getObject().toString()));
+	}
+	*/
 	
 	public void setEbentua(Event ev) {
 		ebentua = ev;
+		setGalderak();
 	}
 	
 	public Event getEbentua() {
 		return ebentua;
 	}
 
+	public void setGalderak() {
+		galderak = this.ebentua.getQuestions();
+	}
+	
+	public List<Question> getGalderak(){
+		System.out.println(galderak);
+		return galderak;
+	}
+	
+	
+	/*
+	public void listener(AjaxBehaviorEvent event) {
+		System.out.println(this.getEbentua());
+	}
+*/
 }

@@ -1,10 +1,51 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1"></meta>
-<title>Create Question</title>
-</head>
-<body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-</body>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<ui:composition>
+<f:view>
+	<h:head>
+		<title>Bets</title>
+		
+	</h:head>
+	<h:body>
+		<h:form id="nireForm">
+			<table>
+				<tr>
+					<td><h:button value="Atzera" outcome="back"/></td>
+				</tr>
+				<tr>
+				<td><p:calendar id="data" value="#{create.date}" navigator="false" mode="inline">
+							<p:ajax event="dateSelect" listener="#{create.onDateSelect}"
+								update="ebentuak"></p:ajax>
+						</p:calendar></td>
+				</tr>
+			
+			<tr>
+			<td><h:selectOneMenu id="ebentuak" value="#{create.ebentua}" converter="omnifaces.SelectItemsConverter">
+					<f:selectItems value="#{create.ebentuak}" />
+				</h:selectOneMenu></td> 
+
+				<h:messages id="mezuak" style="color:blue"/>
+			</tr>
+			<tr>
+				<h:inputText value="#{create.questionText}" />
+			</tr>
+			<tr>
+				<h:inputText value="#{create.minAmount}" />
+			</tr>
+			<tr>
+						<td><h:commandButton value="Onartu" action="#{create.setQuestion()}"/></td>
+			</tr>	
+			</table>
+
+
+			</h:form>
+		</h:body>
+</f:view>
+</ui:composition>
 </html>

@@ -10,24 +10,38 @@
 <f:view>
 	<h:head>
 		<title>Bets</title>
-		<h:outputScript library="js" name="infoJavaScript.js"/>
+		
 	</h:head>
 	<h:body>
 		<h:form id="nireForm">
 			<table>
+				<tr>
+					<td><h:button value="Atzera" outcome="back"/></td>
+				</tr>
 				<tr>
 				<td><p:calendar id="data" value="#{query.date}" navigator="false" mode="inline">
 							<p:ajax event="dateSelect" listener="#{query.onDateSelect}"
 								update="ebentuak"></p:ajax>
 						</p:calendar></td>
 				</tr>
+			
+			<tr>
+			<td><h:selectOneMenu id="ebentuak" value="#{query.ebentua}" converter="omnifaces.SelectItemsConverter">
+					<f:selectItems value="#{query.ebentuak}" />
+				</h:selectOneMenu></td> 
+			<td>
+				<h:commandButton value="Bilatu"/>
+			</td>
+				<h:messages id="mezuak" style="color:blue"/>
+			</tr>
 			</table>
 
-			<td><h:selectOneMenu id="ebentuak" value="#{query.ebentua}">
-					<f:selectItems id="ebentua" value="#{query.ebentuak}" />
-				</h:selectOneMenu></td>
+				<ui:repeat value="#{query.galderak}" var="galdera">
+					<li><h:link value="#{galdera.question}" outcome="galdera">
+							
+						</h:link></li>
+				</ui:repeat>
 
-				<h:messages id="mezuak" style="color:blue"/>
 			</h:form>
 		</h:body>
 </f:view>
