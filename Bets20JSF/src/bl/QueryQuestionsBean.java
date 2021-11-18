@@ -22,8 +22,8 @@ import domain.Question;
 public class QueryQuestionsBean {
 
 	private BLFacade businessLogic = FacadeBean.getBusinessLogic();
-	private static List<Event> ebentuak = new ArrayList<Event>(); //businessLogic.getEvents(UtilDate.newDate(2022, 0, 17));
-	private static List<Question> galderak = new ArrayList<Question>();
+	private List<Event> ebentuak = new ArrayList<Event>(); //businessLogic.getEvents(UtilDate.newDate(2022, 0, 17));
+	private List<Question> galderak = new ArrayList<Question>();
 	private Date date;
 	private Event ebentua;
 	

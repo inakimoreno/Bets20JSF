@@ -36,11 +36,13 @@
 			</tr>
 			</table>
 
-				<ui:repeat value="#{query.galderak}" var="galdera">
-					<li><h:link value="#{galdera.question}" outcome="galdera">
-							
-						</h:link></li>
-				</ui:repeat>
+				<td><p:dataTable id="taulaPF" value="#{query.galderak}" var="galdera"
+						selectionMode="single" border="1"
+						rowKey="#{galdera.questionNumber}">
+						<f:facet name="header">Galderak:</f:facet>
+						<p:column headerText="Kodea">#{galdera.questionNumber}</p:column>
+						<p:column headerText="Galdera">#{galdera.question}</p:column>
+					</p:dataTable></td>
 
 			</h:form>
 		</h:body>

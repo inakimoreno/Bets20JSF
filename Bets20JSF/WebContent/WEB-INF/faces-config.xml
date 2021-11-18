@@ -8,17 +8,17 @@
 	<managed-bean>
 		<managed-bean-name>query</managed-bean-name>
 		<managed-bean-class>bl.QueryQuestionsBean</managed-bean-class>
-		<managed-bean-scope>request</managed-bean-scope>
+		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
 	<managed-bean>
 		<managed-bean-name>facade</managed-bean-name>
 		<managed-bean-class>bl.FacadeBean</managed-bean-class>
-		<managed-bean-scope>request</managed-bean-scope>
+		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
 	<managed-bean>
 		<managed-bean-name>create</managed-bean-name>
 		<managed-bean-class>bl.CreateQuestionBean</managed-bean-class>
-		<managed-bean-scope>request</managed-bean-scope>
+		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
 	<navigation-rule>
 		<display-name>Home.xhtml</display-name>
