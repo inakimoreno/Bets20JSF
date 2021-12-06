@@ -75,7 +75,7 @@ public class BLFacadeImplementation  implements BLFacade {
 		
 		 qry=dbManager.createQuestion(event,question,betMinimum);		
 
-		dbManager.close();
+		//dbManager.close();
 		
 		return qry;
    };
