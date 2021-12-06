@@ -53,7 +53,7 @@ public class DataAccess implements DataAccessInterface {
 	 * This method is invoked by the business logic (constructor of BLFacadeImplementation) when the option "initialize" is declared in the tag dataBaseOpenMode of resources/config.xml file
 	 */	
 	public void initializeDB(){
-		
+		/*
 		db.getTransaction().begin();
 		try {
 
@@ -157,7 +157,7 @@ public class DataAccess implements DataAccessInterface {
 		}
 		catch (Exception e){
 			e.printStackTrace();
-		}
+		}*/
 	}
 	
 	/**
@@ -266,7 +266,7 @@ public boolean existQuestion(Event event, String question) {
 
 	
 
-	@Override
+	//@Override
 	public void emptyDatabase() {
 		
 		File f=new File(c.getDbFilename());

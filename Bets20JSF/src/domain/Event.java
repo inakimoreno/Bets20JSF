@@ -1,8 +1,9 @@
 package domain;
 
 import java.io.Serializable;
-
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Vector;
 
 import javax.persistence.*;
@@ -21,25 +22,25 @@ public class Event implements Serializable {
 	private String description; 
 	private Date eventDate;
 	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)
-	private Vector<Question> questions=new Vector<Question>();
+	private List<Question> questions=new ArrayList<Question>();
 
-	public Vector<Question> getQuestions() {
+	public List<Question> getQuestions() {
 		return questions;
 	}
 
-	public void setQuestions(Vector<Question> questions) {
+	public void setQuestions(List<Question> questions) {
 		this.questions = questions;
 	}
 
 	public Event() {
 		super();
 	}
-
+/*
 	public Event(Integer eventNumber, String description,Date eventDate) {
 		this.eventNumber = eventNumber;
 		this.description = description;
 		this.eventDate=eventDate;
-	}
+	}*/
 	
 	public Event( String description,Date eventDate) {
 		this.description = description;

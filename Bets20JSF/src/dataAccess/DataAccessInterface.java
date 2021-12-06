@@ -24,7 +24,7 @@ public interface DataAccessInterface {
 	/**
 	 * This method removes all the elements of the database
 	 */
-	void emptyDatabase();
+	//void emptyDatabase();
 	
 	
 	/**

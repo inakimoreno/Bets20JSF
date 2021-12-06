@@ -9,6 +9,7 @@ import java.util.Vector;
 
 import configuration.ConfigXML;
 import dataAccess.DataAccessInterface;
+import dataAccess.HibernateDataAccess;
 import domain.Question;
 import domain.Event;
 import exceptions.EventFinished;
@@ -20,6 +21,8 @@ import exceptions.QuestionAlreadyExist;
 public class BLFacadeImplementation  implements BLFacade {
 	DataAccessInterface dbManager;
 
+	//HibernateDataAccess dbManager;
+	
 	public BLFacadeImplementation()  {		
 		System.out.println("Creating BLFacadeImplementation instance");
 		ConfigXML c=ConfigXML.getInstance();
@@ -39,7 +42,7 @@ public class BLFacadeImplementation  implements BLFacade {
 		ConfigXML c=ConfigXML.getInstance();
 		
 		if (c.getDataBaseOpenMode().equals("initialize")) {
-			da.emptyDatabase();
+			//da.emptyDatabase();
 			da.open();
 			da.initializeDB();
 			da.close();
