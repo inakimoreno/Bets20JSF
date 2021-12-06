@@ -1,12 +1,12 @@
 package bl;
 
 import java.util.ArrayList;
+
 import java.util.Date;
 import java.util.List;
 
 import org.primefaces.event.SelectEvent;
 
-import businessLogic.BLFacade;
 import domain.Event;
 import domain.Question;
 

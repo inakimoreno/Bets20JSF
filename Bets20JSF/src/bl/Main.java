@@ -2,7 +2,7 @@ package bl;
 
 import java.util.List;
 
-import businessLogic.BLFacade;
+
 import configuration.UtilDate;
 import domain.Event;
 

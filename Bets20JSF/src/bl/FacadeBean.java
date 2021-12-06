@@ -1,7 +1,5 @@
 package bl;
 
-import businessLogic.BLFacade;
-import businessLogic.BLFacadeImplementation;
 import dataAccess.DataAccess;
 
 public class FacadeBean {
