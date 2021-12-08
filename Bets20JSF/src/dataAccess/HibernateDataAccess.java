@@ -141,11 +141,13 @@ public class HibernateDataAccess implements DataAccessInterface{
 	public Question createQuestion(Event event, String question, float betMinimum) throws  QuestionAlreadyExist {
 		System.out.println(">> DataAccess: createQuestion=> event= "+event+" question= "+question+" betMinimum="+betMinimum);
 		
+			session.getTransaction().begin();
+		
 			Event ev = (Event) session.get(Event.class, event.getEventNumber());
 			
 			if (ev.DoesQuestionExists(question)) throw new QuestionAlreadyExist(ResourceBundle.getBundle("Etiquetas").getString("ErrorQueryAlreadyExist"));
 			
-			session.getTransaction().begin();
+			
 			Question q = ev.addQuestion(question, betMinimum);
 			//db.persist(q);
 			session.persist(ev); // db.persist(q) not required when CascadeType.PERSIST is added in questions property of Event class
