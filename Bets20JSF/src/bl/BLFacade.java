@@ -10,6 +10,7 @@ import java.util.Date;
 
 //import domain.Booking;
 import domain.Question;
+import domain.User;
 import domain.Event;
 import exceptions.EventFinished;
 import exceptions.QuestionAlreadyExist;
@@ -58,5 +59,10 @@ public interface BLFacade  {
 	 */	
 	public void initializeBD();
 
+	
+	public User createUser(String username, String password, String fullName, String email);
+
+
+	public User getUser(String username, String password);
 	
 }

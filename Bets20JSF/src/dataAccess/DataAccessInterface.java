@@ -5,7 +5,9 @@ import java.util.Vector;
 
 import domain.Event;
 import domain.Question;
+import domain.User;
 import exceptions.QuestionAlreadyExist;
+import exceptions.UserAlreadyExists;
 
 public interface DataAccessInterface {
 
@@ -71,5 +73,8 @@ public interface DataAccessInterface {
 	boolean existQuestion(Event event, String question);
 
 	
+	public User createUser(String username, String password, String fullName, String email) throws UserAlreadyExists ;
+
+	public User getUser(String username, String password);
 
 }

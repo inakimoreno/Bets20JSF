@@ -11,6 +11,7 @@ import configuration.ConfigXML;
 import dataAccess.DataAccessInterface;
 import dataAccess.HibernateDataAccess;
 import domain.Question;
+import domain.User;
 import domain.Event;
 import exceptions.EventFinished;
 import exceptions.QuestionAlreadyExist;
@@ -107,6 +108,24 @@ public class BLFacadeImplementation  implements BLFacade {
 		return dates;
 	}
 	
+	public User createUser(String username, String password, String fullName, String email) {
+		User us = null;
+		dbManager.open();
+		try{
+			us = dbManager.createUser(username, password, fullName, email);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		dbManager.close();
+		return us;
+	}
+	
+	public User getUser(String username, String password) {
+		dbManager.open();
+		User us = dbManager.getUser(username, password);
+		dbManager.close();
+		return us;
+	}
 	
 	public void close() {
 		//DataAccess dB4oManager=new DataAccess(false);

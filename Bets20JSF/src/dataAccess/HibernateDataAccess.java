@@ -8,12 +8,15 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.Vector;
 
+import javax.persistence.NoResultException;
 
 import configuration.UtilDate;
 import domain.Event;
 import domain.HibernateUtil;
 import domain.Question;
+import domain.User;
 import exceptions.QuestionAlreadyExist;
+import exceptions.UserAlreadyExists;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -192,6 +195,35 @@ public class HibernateDataAccess implements DataAccessInterface{
 		Event ev = (Event) session.get(Event.class, event.getEventNumber());
 		return ev.DoesQuestionExists(question);
 		
+	}
+	
+	public User createUser(String username, String password, String fullName, String email) throws UserAlreadyExists {
+		User us = new User(username, password, fullName, email);
+		session.beginTransaction();
+		if(existsUser(username))
+			throw new UserAlreadyExists();
+		session.persist(us);
+		return us;
+	}
+	
+	public User getUser(String username, String password) {
+		session.beginTransaction();
+		Query query = session.createQuery("SELECT us FROM User us WHERE us.username = ? and us.password = ?");
+		query.setParameter(0, username);
+		query.setParameter(1, password);
+		User us = (User) query.uniqueResult();
+		return us;
+	}
+	
+	public boolean existsUser(String username) {
+		Query query = session.createQuery("SELECT us FROM User us WHERE us.username = ?");
+		query.setParameter(0, username);
+		
+		if(query.uniqueResult()==null) {
+			return false;
+		}
+		
+		return true;
 	}
 	
 	public void close(){

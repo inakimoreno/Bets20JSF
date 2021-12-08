@@ -25,7 +25,7 @@ import exceptions.QuestionAlreadyExist;
 /**
  * It implements the data access to the objectDb database
  */
-public class DataAccess implements DataAccessInterface {
+public class DataAccess {
 	protected static EntityManager  db;
 	protected static EntityManagerFactory emf;
 
@@ -230,7 +230,7 @@ public class DataAccess implements DataAccessInterface {
 	 	return res;
 	}
 	
-@Override
+//@Override
 public void open(){
 		
 		System.out.println("Opening DataAccess instance => isDatabaseLocal: "+c.isDatabaseLocal()+" getDatabBaseOpenMode: "+c.getDataBaseOpenMode());

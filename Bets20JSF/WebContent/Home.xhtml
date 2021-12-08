@@ -4,7 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core">
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
 <ui:composition>
 <f:view>
 	<h:head>
@@ -14,10 +15,20 @@
 		<h:form>
 			<h3>
 				Ongi etorri Bets proiektura
+				<c:if test="#{login.user!=null}">
 				<br/>
 				<h:button value="Query Questions" outcome="query"> </h:button>
 				<br/>
 				<h:button value="Create Question" outcome="create"> </h:button>
+				<br/>
+				<h:commandButton value="Log Out" action="#{login.logOut()}"/>
+				</c:if>
+				<c:if test="#{login.user==null}">
+				<br/>
+				<h:button value="Log In" outcome="logIn"> </h:button>
+				<br/>
+				<h:button value="Sign Up" outcome="createUser"> </h:button>
+				</c:if>
 			</h3>
 		</h:form>
 	</h:body>
