@@ -14,5 +14,6 @@
   <mapping class="domain.Event"/>
   <mapping class="domain.Question"/>
   <mapping class="domain.User"/>
+  <mapping class="domain.Bet"/>
  </session-factory>
 </hibernate-configuration>

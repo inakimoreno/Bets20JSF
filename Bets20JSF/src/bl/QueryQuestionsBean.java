@@ -28,6 +28,8 @@ public class QueryQuestionsBean {
 	private List<Question> galderak = new ArrayList<Question>();
 	private Date date;
 	private Event ebentua;
+	private int galdera;
+	private boolean bilatuButtonState=true;
 	
 	public QueryQuestionsBean() {
 	}
@@ -88,10 +90,24 @@ public class QueryQuestionsBean {
 		return galderak;
 	}
 	
-	
-	/*
-	public void listener(AjaxBehaviorEvent event) {
-		System.out.println(this.getEbentua());
+	public void onQuestionSelect(SelectEvent event) {
+		this.galdera = ((Question) event.getObject()).getQuestionNumber();
+		System.out.println(this.galdera);
 	}
-*/
+	
+	public void setGaldera(Question galdera) {
+		this.galdera = galdera.getQuestionNumber();
+	}
+	
+	public int getGaldera() {
+		return galdera;
+	}
+	
+	public void setBilatuButton(boolean state) {
+		bilatuButtonState = state;
+	}
+	
+	public boolean getBilatuButtonState() {
+		return bilatuButtonState;
+	}
 }

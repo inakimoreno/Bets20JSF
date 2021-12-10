@@ -18,12 +18,14 @@
 				<tr>
 					<td><h:button value="Atzera" outcome="back"/></td>
 				</tr>
-			<tr><td>Galderaren enuntziatua eta apostu minimoa adierazi:</td></tr>
+			<tr><td><h3>Hasi saioa</h3></td></tr>
 			<tr>
-				<td><h:inputText value="#{login.username}" /></td>
+				<td><h:inputText id="email" value="#{login.username}" />
+				<p:watermark for="email" value="Enter your email" id="emailwatermark"/></td>
 			</tr>
 			<tr>
-				<td><h:inputSecret value="#{login.password}" /></td>
+				<td><h:inputSecret id="password" value="#{login.password}" />
+				<p:watermark for="password" value="Enter your password" id="passwordwatermark"/></td>
 			</tr>
 			<tr>
 				<td><h:commandButton value="Kautotu" action="#{login.setUser()}"/></td>

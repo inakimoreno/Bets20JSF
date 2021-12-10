@@ -12,6 +12,7 @@ import dataAccess.DataAccessInterface;
 import dataAccess.HibernateDataAccess;
 import domain.Question;
 import domain.User;
+import domain.Bet;
 import domain.Event;
 import exceptions.EventFinished;
 import exceptions.QuestionAlreadyExist;
@@ -125,6 +126,13 @@ public class BLFacadeImplementation  implements BLFacade {
 		User us = dbManager.getUser(username, password);
 		dbManager.close();
 		return us;
+	}
+	
+	public Bet createBet(int event, int question, User user, String option, float amount) {
+		dbManager.open();
+		Bet bet = dbManager.createBet(event, question, user, option, amount);
+		dbManager.close();
+		return bet;
 	}
 	
 	public void close() {

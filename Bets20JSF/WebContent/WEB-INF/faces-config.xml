@@ -27,6 +27,11 @@
   <managed-bean-class>bl.LoginBean</managed-bean-class>
   <managed-bean-scope>session</managed-bean-scope>
  </managed-bean>
+ <managed-bean>
+  <managed-bean-name>bet</managed-bean-name>
+  <managed-bean-class>bl.BetBean</managed-bean-class>
+  <managed-bean-scope>session</managed-bean-scope>
+ </managed-bean>
  <navigation-rule>
   <display-name>Home.xhtml</display-name>
   <from-view-id>/Home.xhtml</from-view-id>
@@ -46,7 +51,7 @@
    <from-outcome>createUser</from-outcome>
    <to-view-id>/CreateUser.xhtml</to-view-id>
   </navigation-case>
-    <navigation-case>
+  <navigation-case>
    <from-outcome>logIn</from-outcome>
    <to-view-id>/LogIn.xhtml</to-view-id>
   </navigation-case>
@@ -75,7 +80,7 @@
    <to-view-id>/Home.xhtml</to-view-id>
   </navigation-case>
  </navigation-rule>
-  <navigation-rule>
+ <navigation-rule>
   <display-name>LogIn.xhtml</display-name>
   <from-view-id>/LogIn.xhtml</from-view-id>
   <navigation-case>

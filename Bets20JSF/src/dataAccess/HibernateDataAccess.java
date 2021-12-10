@@ -11,6 +11,7 @@ import java.util.Vector;
 import javax.persistence.NoResultException;
 
 import configuration.UtilDate;
+import domain.Bet;
 import domain.Event;
 import domain.HibernateUtil;
 import domain.Question;
@@ -226,6 +227,13 @@ public class HibernateDataAccess implements DataAccessInterface{
 		}
 		
 		return true;
+	}
+	
+	public Bet createBet(int event, int question, User user, String option, float amount) {
+		session.beginTransaction();
+		Bet bet = new Bet(event, question, user, option, amount);
+		session.persist(bet);
+		return bet;
 	}
 	
 	public void close(){

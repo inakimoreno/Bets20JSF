@@ -3,6 +3,7 @@ package dataAccess;
 import java.util.Date;
 import java.util.Vector;
 
+import domain.Bet;
 import domain.Event;
 import domain.Question;
 import domain.User;
@@ -76,5 +77,7 @@ public interface DataAccessInterface {
 	public User createUser(String username, String password, String fullName, String email) throws UserAlreadyExists ;
 
 	public User getUser(String username, String password);
+	
+	public Bet createBet(int event, int question, User user, String option, float amount);
 
 }

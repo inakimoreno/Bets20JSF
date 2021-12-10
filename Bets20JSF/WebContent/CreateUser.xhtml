@@ -18,18 +18,22 @@
 				<tr>
 					<td><h:button value="Atzera" outcome="back"/></td>
 				</tr>
-			<tr><td>Galderaren enuntziatua eta apostu minimoa adierazi:</td></tr>
+			<tr><td><h3>Sortu zure kontua!</h3></td></tr>
 			<tr>
-				<td><h:inputText value="#{createUser.username}" /></td>
+				<td><h:inputText id="username" value="#{createUser.username}"/>
+				<p:watermark for="username" value="Enter your username" id="usernamewatermark"/></td>
 			</tr>
 			<tr>
-				<td><h:inputSecret value="#{createUser.password}" /></td>
+				<td><h:inputSecret id="password" value="#{createUser.password}"/>
+				<p:watermark for="password" value="Enter your password" id="passwordwatermark"/></td>
 			</tr>
 			<tr>
-				<td><h:inputText value="#{createUser.fullName}" /></td>
+				<td><h:inputText id="fullname" value="#{createUser.fullName}"/>
+				<p:watermark for="fullname" value="Enter your full name" id="fullnamewatermark"/></td>
 			</tr>
 			<tr>
-				<td><h:inputText value="#{createUser.email}" /></td>
+				<td><h:inputText id="email" value="#{createUser.email}"/>
+				<p:watermark for="email" value="Enter your email" id="emailwatermark"/></td>
 			</tr>
 			<tr>
 				<td><h:commandButton value="Erregistratu" action="#{createUser.setUser()}"/></td>

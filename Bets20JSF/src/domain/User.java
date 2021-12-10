@@ -1,10 +1,16 @@
 package domain;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class User {
@@ -16,6 +22,8 @@ public class User {
 	private String password;
 	private String fullName;
 	private String email;
+	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)
+	private List<Bet> bets=new ArrayList<Bet>();
 	
 	public User() {}
 	
@@ -57,4 +65,17 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	public List<Bet> getBets(){
+		return this.bets;
+	}
+	
+	public void setBets(List<Bet> bets) {
+		this.bets = bets;
+	}
+	
+	public String toString() {
+		return username;
+	}
+	
 }

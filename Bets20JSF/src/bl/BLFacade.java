@@ -11,6 +11,7 @@ import java.util.Date;
 //import domain.Booking;
 import domain.Question;
 import domain.User;
+import domain.Bet;
 import domain.Event;
 import exceptions.EventFinished;
 import exceptions.QuestionAlreadyExist;
@@ -64,5 +65,7 @@ public interface BLFacade  {
 
 
 	public User getUser(String username, String password);
+	
+	public Bet createBet(int event, int question, User user, String option, float amount);
 	
 }

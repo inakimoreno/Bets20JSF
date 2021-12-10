@@ -10,27 +10,30 @@
 <f:view>
 	<h:head>
 		<title>Bets</title>
+		<h:outputStylesheet name="css/style.css"></h:outputStylesheet>
 	</h:head>
 	<h:body>
+		<div style="text-align: center">
 		<h:form>
 			<h3>
-				Ongi etorri Bets proiektura
+				Ongi etorri Bets proiektura &nbsp;</h3>
+				<h:outputText value="#{login.user}" />
+				<br/>
+				<h:button class="button" value="Query or Bet" outcome="query"></h:button>
+				<br/>
+				<h:button class="button" value="Create Question" outcome="create"> </h:button>
 				<c:if test="#{login.user!=null}">
 				<br/>
-				<h:button value="Query Questions" outcome="query"> </h:button>
-				<br/>
-				<h:button value="Create Question" outcome="create"> </h:button>
-				<br/>
-				<h:commandButton value="Log Out" action="#{login.logOut()}"/>
+				<h:commandButton class="button" value="Log Out" action="#{login.logOut()}"/>
 				</c:if>
 				<c:if test="#{login.user==null}">
 				<br/>
-				<h:button value="Log In" outcome="logIn"> </h:button>
+				<h:button class="button" value="Log In" outcome="logIn"> </h:button>
 				<br/>
-				<h:button value="Sign Up" outcome="createUser"> </h:button>
+				<h:button class="button" value="Sign Up" outcome="createUser"> </h:button>
 				</c:if>
-			</h3>
 		</h:form>
+		</div>
 	</h:body>
 </f:view>
 </ui:composition>
