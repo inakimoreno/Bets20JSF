@@ -10,13 +10,13 @@
 <f:view>
 	<h:head>
 		<title>Bets</title>
-		
+		<h:outputStylesheet name="css/style.css"></h:outputStylesheet>
 	</h:head>
 	<h:body>
 		<h:form id="nireForm">
 			<table>
 				<tr>
-					<td><h:button value="Atzera" outcome="back"/></td>
+					<td><h:button class="button" value="Atzera" outcome="back"/></td>
 				</tr>
 				<tr>
 				<td><p:calendar id="data" value="#{create.date}" navigator="false" mode="inline">
@@ -34,13 +34,14 @@
 			</tr>
 			<tr><td>Galderaren enuntziatua eta apostu minimoa adierazi:</td></tr>
 			<tr>
-				<td><h:inputText value="#{create.questionText}" /></td>
+				<td><h:inputText id="question" value="#{create.questionText}" />
+				<p:watermark for="question" value="Enter the question" id="emailwatermark"/></td>
 			</tr>
 			<tr>
 				<td><h:inputText value="#{create.minAmount}" /></td>
 			</tr>
 			<tr>
-						<td><h:commandButton value="Onartu" action="#{create.setQuestion()}"/></td>
+						<td><h:commandButton class="button" value="Onartu" action="#{create.setQuestion()}" outcome="back"/></td>
 			</tr>	
 			</table>
 

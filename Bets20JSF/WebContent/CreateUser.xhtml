@@ -10,13 +10,13 @@
 <f:view>
 	<h:head>
 		<title>Bets</title>
-		
+		<h:outputStylesheet name="css/style.css"></h:outputStylesheet>
 	</h:head>
 	<h:body>
 		<h:form id="nireForm">
 			<table>
 				<tr>
-					<td><h:button value="Atzera" outcome="back"/></td>
+					<td><h:button class="button" value="Atzera" outcome="back"/></td>
 				</tr>
 			<tr><td><h3>Sortu zure kontua!</h3></td></tr>
 			<tr>
@@ -36,7 +36,7 @@
 				<p:watermark for="email" value="Enter your email" id="emailwatermark"/></td>
 			</tr>
 			<tr>
-				<td><h:commandButton value="Erregistratu" action="#{createUser.setUser()}"/></td>
+				<td><h:commandButton class="button" value="Erregistratu" action="#{createUser.setUser()}"/></td>
 			</tr>	
 			</table>
 

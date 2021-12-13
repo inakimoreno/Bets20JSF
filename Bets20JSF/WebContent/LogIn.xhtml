@@ -10,25 +10,25 @@
 <f:view>
 	<h:head>
 		<title>Bets</title>
-		
+		<h:outputStylesheet name="css/style.css"></h:outputStylesheet>
 	</h:head>
 	<h:body>
 		<h:form id="nireForm">
 			<table>
 				<tr>
-					<td><h:button value="Atzera" outcome="back"/></td>
+					<td><h:button class="button" value="Atzera" outcome="back"/></td>
 				</tr>
 			<tr><td><h3>Hasi saioa</h3></td></tr>
 			<tr>
 				<td><h:inputText id="email" value="#{login.username}" />
-				<p:watermark for="email" value="Enter your email" id="emailwatermark"/></td>
+				<p:watermark for="email" value="Enter your username" id="emailwatermark"/></td>
 			</tr>
 			<tr>
 				<td><h:inputSecret id="password" value="#{login.password}" />
 				<p:watermark for="password" value="Enter your password" id="passwordwatermark"/></td>
 			</tr>
 			<tr>
-				<td><h:commandButton value="Kautotu" action="#{login.setUser()}"/></td>
+				<td><h:commandButton class="button" value="Kautotu" action="#{login.setUser()}"/></td>
 			</tr>	
 			</table>
 

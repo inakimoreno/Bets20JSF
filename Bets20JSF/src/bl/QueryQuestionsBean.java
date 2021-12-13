@@ -29,7 +29,7 @@ public class QueryQuestionsBean {
 	private Date date;
 	private Event ebentua;
 	private int galdera;
-	private boolean bilatuButtonState=true;
+
 	
 	public QueryQuestionsBean() {
 	}
@@ -60,11 +60,15 @@ public class QueryQuestionsBean {
 	}
 	
 	public void onDateSelect(SelectEvent event) {
+		this.ebentuak.clear();
+		this.galderak.clear();
+		this.galdera=0;
 		this.date = (Date)event.getObject();
 		this.setEbentuak();
 		//System.out.println(this.date);
 		//FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Data aukeratua: "+this.getDate()+" "+ this.ebentuak));
 	}
+	
 	/*
 	public void onEventSelect(AjaxBehaviorEvent event) {
 		//this.setEbentua(event.ge);
@@ -73,8 +77,10 @@ public class QueryQuestionsBean {
 	*/
 	
 	public void setEbentua(Event ev) {
-		ebentua = ev;
-		setGalderak();
+		if(ev!=null) {
+			ebentua = ev;
+			setGalderak();
+		}
 	}
 	
 	public Event getEbentua() {
@@ -103,11 +109,4 @@ public class QueryQuestionsBean {
 		return galdera;
 	}
 	
-	public void setBilatuButton(boolean state) {
-		bilatuButtonState = state;
-	}
-	
-	public boolean getBilatuButtonState() {
-		return bilatuButtonState;
-	}
 }

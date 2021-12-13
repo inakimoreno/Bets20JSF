@@ -11,27 +11,25 @@
 <f:view>
 	<h:head>
 		<title>Bets</title>
-		
+		<h:outputStylesheet name="css/style.css"></h:outputStylesheet>
 	</h:head>
 	<h:body>
 		<h:form id="nireForm">
 			<table>
 				<tr>
-					<td><h:button value="Atzera" outcome="back"/></td>
+					<td><h:button class="button" value="Atzera" outcome="back"/></td>
 				</tr>
 				<tr>
 				<td><p:calendar id="data" value="#{query.date}" navigator="false" mode="inline">
-							<p:ajax event="dateSelect" listener="#{query.onDateSelect}" update="ebentuak buttonBilatu" action="true"></p:ajax>
+							<p:ajax event="dateSelect" listener="#{query.onDateSelect}" update="ebentuak taulaPF" action="true"></p:ajax>
 						</p:calendar></td>
 				</tr>
 			
 			<tr>
-			<td><h:selectOneMenu id="ebentuak" value="#{query.ebentua}" converter="omnifaces.SelectItemsConverter" update="buttonBilatu" action="query.setBilatuButton(false)">
+			<td><h:selectOneMenu id="ebentuak" value="#{query.ebentua}" converter="omnifaces.SelectItemsConverter" onchange="submit()">
+					<f:selectItem itemValue="#{null}" itemLabel="--select--" selected="true"/>
 					<f:selectItems value="#{query.ebentuak}" />
 				</h:selectOneMenu></td> 
-			<td>
-				<h:commandButton id="buttonBilatu" value="Bilatu" disabled="#{query.bilatuButtonState}"/>
-			</td>
 				<h:messages id="mezuak" style="color:blue"/>
 			</tr>
 			</table>
@@ -39,23 +37,27 @@
 				<td><p:dataTable id="taulaPF" value="#{query.galderak}" var="galdera"
 						selectionMode="single" border="1"
 						rowKey="#{galdera.questionNumber}">
-						<p:ajax event="rowSelect" listener="#{query.onQuestionSelect}"></p:ajax>
- 						<p:ajax event="rowSelect" execute="@this" render="nireForm:perfbyselection" />
+						<p:ajax event="rowSelect" listener="#{query.onQuestionSelect}" action="true" render="wrapper"></p:ajax>
+
 						<f:facet name="header">Galderak:</f:facet>
 						<p:column headerText="Kodea">#{galdera.questionNumber}</p:column>
 						<p:column headerText="Galdera">#{galdera.question}</p:column>
 					</p:dataTable></td>
-					<h:panelGroup id="perfbyselection">
+					<h:panelGroup id="wrapper">
+					
 					
 			<c:if test="#{login.user!=null}">
 						
-						<tr><td><h:inputText value="#{bet.option}" /></td></tr>
-						<tr><td><h:inputText value="#{bet.amount}" /></td></tr>
+						<tr><td><h:inputText id="option" value="#{bet.option}" /></td></tr><br/>
+						<p:watermark for="option" value="Enter the option" id="optionwatermark"/>
+						<tr><td><h:inputText id="amount" value="#{bet.amount}" /></td></tr><br/>
+						<p:watermark for="amount" value="Enter the amount you want to bet" id="amountwatermark"/>
 						<tr><td><h:commandButton value="Apostua egin" action="#{bet.setBet(query.ebentua.eventNumber,query.galdera,login.user,bet.option,bet.amount)}"/></td></tr>
 						
 			</c:if>
 					
 					</h:panelGroup>
+					
 			</h:form>
 		</h:body>
 </f:view>
