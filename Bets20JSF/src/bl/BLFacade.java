@@ -1,12 +1,9 @@
 package bl;
 
 import java.util.Vector;
-
+import java.util.ArrayList;
 import java.util.Date;
-
-
-
-
+import java.util.List;
 
 //import domain.Booking;
 import domain.Question;
@@ -68,4 +65,5 @@ public interface BLFacade  {
 	
 	public Bet createBet(int event, int question, User user, String option, float amount);
 	
+	public List<Question> getAllQuestions();
 }

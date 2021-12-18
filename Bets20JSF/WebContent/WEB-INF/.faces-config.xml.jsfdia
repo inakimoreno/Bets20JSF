@@ -8,6 +8,11 @@
     TITLE="query" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
   <PROCESS-ITEM ID="rules:#Home.xhtml:1" NAME="item1" PATH="/Home.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="showall::#ShowAllQuestions.xhtml"
+    NAME="output" PATH="/ShowAllQuestions.xhtml"
+    TARGET="rules:#ShowAllQuestions.xhtml" TITLE="showall" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#Home.xhtml:2" NAME="item2" PATH="/Home.xhtml" model-entity="JSFProcessItem">
    <PROCESS-ITEM-OUTPUT ID="create::#CreateQuestion.xhtml" NAME="output"
     PATH="/CreateQuestion.xhtml" TARGET="rules:#CreateQuestion.xhtml"
     TITLE="create" model-entity="JSFProcessItemOutput"/>
@@ -50,4 +55,7 @@
     PATH="/Home.xhtml" TARGET="rules:#Home.xhtml" TITLE="back" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#ShowAllQuestions.xhtml"
+  PATH="/ShowAllQuestions.xhtml" SHAPE="522,218,0,0"
+  model-entity="JSFProcessGroup" persistent="true"/>
 </PROCESS>

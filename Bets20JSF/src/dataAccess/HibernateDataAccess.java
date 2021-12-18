@@ -1,5 +1,6 @@
 package dataAccess;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
 import java.util.Date;
@@ -234,6 +235,13 @@ public class HibernateDataAccess implements DataAccessInterface{
 		Bet bet = new Bet(event, question, user, option, amount);
 		session.persist(bet);
 		return bet;
+	}
+	
+	public List<Question> getAllQuestions(){
+		session.beginTransaction();
+		Query query = session.createQuery("SELECT qu FROM Question qu");
+		List<Question> allQuestions = query.list();
+		return allQuestions;
 	}
 	
 	public void close(){

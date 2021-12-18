@@ -37,17 +37,17 @@
 				<td><p:dataTable id="taulaPF" value="#{query.galderak}" var="galdera"
 						selectionMode="single" border="1"
 						rowKey="#{galdera.questionNumber}">
-						<p:ajax event="rowSelect" listener="#{query.onQuestionSelect}" action="true" render="wrapper"></p:ajax>
+						<p:ajax event="rowSelect" listener="#{query.onQuestionSelect}" action="true"></p:ajax>
 
 						<f:facet name="header">Galderak:</f:facet>
 						<p:column headerText="Kodea">#{galdera.questionNumber}</p:column>
 						<p:column headerText="Galdera">#{galdera.question}</p:column>
 					</p:dataTable></td>
-					<h:panelGroup id="wrapper">
+					<div id="wrapper">
 					
 					
 			<c:if test="#{login.user!=null}">
-						
+						<tr><td>Apostuaren aukera eta diru kopurua idatzi:</td></tr><br/>
 						<tr><td><h:inputText id="option" value="#{bet.option}" /></td></tr><br/>
 						<p:watermark for="option" value="Enter the option" id="optionwatermark"/>
 						<tr><td><h:inputText id="amount" value="#{bet.amount}" /></td></tr><br/>
@@ -56,7 +56,7 @@
 						
 			</c:if>
 					
-					</h:panelGroup>
+					</div>
 					
 			</h:form>
 		</h:body>

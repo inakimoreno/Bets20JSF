@@ -1,7 +1,8 @@
 package bl;
+import java.util.ArrayList;
 //hola
 import java.util.Date;
-
+import java.util.List;
 import java.util.ResourceBundle;
 import java.util.Vector;
 
@@ -133,6 +134,13 @@ public class BLFacadeImplementation  implements BLFacade {
 		Bet bet = dbManager.createBet(event, question, user, option, amount);
 		dbManager.close();
 		return bet;
+	}
+	
+	public List<Question> getAllQuestions(){
+		dbManager.open();
+		List<Question> allQuestions = dbManager.getAllQuestions();
+		dbManager.close();
+		return allQuestions;
 	}
 	
 	public void close() {

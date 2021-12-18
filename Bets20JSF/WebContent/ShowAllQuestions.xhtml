@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+<ui:composition>
+<f:view>
+	<h:head>
+		<title>Bets</title>
+		<h:outputStylesheet name="css/style.css"></h:outputStylesheet>
+	</h:head>
+	<h:body>
+		<h:form id="nireForm">
+			<table>
+				<tr>
+					<td>Questions:</td>
+				</tr>
+			
+			<tr>
+			<td><h:selectOneMenu id="galderaGuztiak" value="#{query.question}" converter="omnifaces.SelectItemsConverter" onchange="submit()">
+					<f:selectItem itemValue="#{null}" itemLabel="--select--" selected="true"/>
+					<f:selectItems value="#{query.galderaGuztiak}" />
+				</h:selectOneMenu></td> 
+				<h:messages id="mezuak" style="color:blue"/>
+			</tr>
+			</table>
+			</h:form>
+		</h:body>
+</f:view>
+</ui:composition>
+</html>

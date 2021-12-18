@@ -23,6 +23,8 @@
 				<h:button class="button" value="Query or Bet" outcome="query"></h:button>
 				<br/>
 				<h:button class="button" value="Create Question" outcome="create"> </h:button>
+				<br/>
+				<h:button class="button" value="Show all questions" outcome="showall"> </h:button>
 				<c:if test="#{login.user!=null}">
 				<br/>
 				<h:commandButton class="button" value="Log Out" action="#{login.logOut()}"/>

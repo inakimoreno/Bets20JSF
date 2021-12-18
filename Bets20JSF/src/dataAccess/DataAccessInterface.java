@@ -1,6 +1,8 @@
 package dataAccess;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Vector;
 
 import domain.Bet;
@@ -80,4 +82,6 @@ public interface DataAccessInterface {
 	
 	public Bet createBet(int event, int question, User user, String option, float amount);
 
+	public List<Question> getAllQuestions();
+	
 }

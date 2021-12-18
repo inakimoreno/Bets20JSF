@@ -26,9 +26,11 @@ public class QueryQuestionsBean {
 	private BLFacade businessLogic = FacadeBean.getBusinessLogic();
 	private List<Event> ebentuak = new ArrayList<Event>(); //businessLogic.getEvents(UtilDate.newDate(2022, 0, 17));
 	private List<Question> galderak = new ArrayList<Question>();
+	private List<Question> galderaGuztiak = businessLogic.getAllQuestions();
 	private Date date;
 	private Event ebentua;
 	private int galdera;
+	private Question question;
 
 	
 	public QueryQuestionsBean() {
@@ -96,6 +98,14 @@ public class QueryQuestionsBean {
 		return galderak;
 	}
 	
+	public void setGalderaGuztiak() {
+		this.galderaGuztiak = businessLogic.getAllQuestions();
+	}
+	
+	public List<Question> getGalderaGuztiak(){
+		return galderaGuztiak;
+	}
+	
 	public void onQuestionSelect(SelectEvent event) {
 		this.galdera = ((Question) event.getObject()).getQuestionNumber();
 		System.out.println(this.galdera);
@@ -107,6 +117,19 @@ public class QueryQuestionsBean {
 	
 	public int getGaldera() {
 		return galdera;
+	}
+	
+	public List<Question> getAllQuestions(){
+		galderaGuztiak = businessLogic.getAllQuestions();
+		return galderaGuztiak;
+	}
+	
+	public void setQuestion(Question qu) {
+		this.question = qu;
+	}
+	
+	public Question getQuestion() {
+		return this.question;
 	}
 	
 }
